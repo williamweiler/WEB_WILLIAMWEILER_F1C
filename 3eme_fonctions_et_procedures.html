@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<HTML>
+	
+	<HEAD>
+
+	<TITLE> Révision langage pascal
+	</TITLE>
+
+	<meta charset="utf-8"/>
+	</HEAD>
+
+<body>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<br>
+
+<header>
+
+<h3 class="T1"> Présentation des fonctions et des procédures </h3>
+<br>
+
+</header>
+
+<section>
+
+<p clas="para">Les procédures et fonctions sont des sortes de sous-programmes écrits avant le programme principal mais appelés depuis ce programme principal, d'une autre procédure ou même d'une autre fonction.<br>
+Le nom d'une procédure ou d'une fonction est un identifiant qui ne de doit pas excéder 127 caractères et ne pas contenir d'accent.<br>
+ Ce nom doit être différent de celui d'une instruction en Pascal.</p>
+
+<aside>
+<h3> Structure des Procedures</h3>
+<br>
+</aside>
+
+<article>
+
+<p> syntaxe d'une Procedure </p>
+<br>
+<br>
+<br>
+
+<p> program nom de programme ; </p><br>
+
+<p>procedure nom de procédure;  {Déclaration de la procédure}</p><br>
+
+<p>begin</p>
+<p>...</p>
+<p>instructions</p>
+<p>...</p>
+<p>end;</p>
+
+<p>begin;  {Début du programme principal}</p>
+<p>...</p>
+<p>nom de procédure; {appel de la procédure}</p>
+<p>...</p>
+<p>end.</p>
+<br>
+<br>
+<br>
+<p> EXEMPLE : </p>
+<p>program test;</p>
+
+<p>procedure AfficheDate;</p>
+<p>begin</p>
+<p>writeln(DateTimeToStr(Now));</p>
+<p>end;</p>
+
+<p>begin;</p>
+<p>write(‘ Début : ’);AfficheDate;</p>
+<p>writeln(‘ Suite des instuctions ’);</p>
+<p>write(‘ Fin  : ’);AfficheDate;</p>
+<p>end.</p>
+
+<p>On peut déclarer des variables locales à une procédure ou une fonction. La portée de ces variables sera locale à la procédure ou à la fonction. </p>
+<p>Exemple</p>
+<p>program Dessine_Carre_Chiffres;</p>
+
+<p>procedure Ligne;   {dessine une ligne de 5 chiffres}</p>
+<p>var i : integer;   {la variable i est locale à la procédure Ligne}</p>
+<p>begin</p>
+<p>for i:=1 to 5 do write(i);</p>
+<p>end;</p>
+
+<p>var i : integer;</p>
+<p>begin</p>
+<p>for i:=1 to 5 do {dessine 5 lignes de 5 chiffres}</p>
+ <p> begin</p>
+   <p> Ligne; writeln;</p>
+  <p>end;</p>
+<p>end.</p>
+<br>
+<br>
+<br>
+</article>
+
+<br>
+<br>
+
+
+
+ <p><a href="http://www.commentcamarche.net/download/telecharger-34096271-free-pascal">lien téléchargement FREE PASCAL </a></p>
+  <p><a href="4eme_les_fonctions.html">page suivante</a></p>
+<br>
+<br>
+</section>
+<footer>
+
+<p> Copyright WEILER William - Tous droits reserves 
+<br>
+
+</footer>
+</body>
+
+</HTML>

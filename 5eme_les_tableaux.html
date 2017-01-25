@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<HTML>
+	
+	<HEAD>
+
+	<TITLE> Révision langage pascal
+	</TITLE>
+
+	<meta charset="utf-8"/>
+	</HEAD>
+
+<body>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<br>
+<header>
+<h3 class="T1"> Les Tableaux</h3>
+</header>
+<section>
+<h2 class="T1">Présentation des Tableaux </h2><br>
+<p class="para">Un outils particulièrement pratique et proposé dans la grande majorité des langages est le tableau. Il permet le stockage d'une série d'éléments de même type.<br><br></p>
+<p class="para">Imaginons un professeur voulant stocker les notes de 5 élèves, il peut ainsi utiliser un tableau d'entiers de longueur 5. Illustrons ce dernier :<br>
+12/16/07/13/09</p><br><br>
+
+<p class="para">en pascal, un tableau peut-être déclaré de la manière suivante:</p>
+
+<p> var</p><br>
+<p>		t: array[1..5] of interger; </p><br><br>
+<p>Ainsi, ce code déclare un tableau d'entiers, dont les indices vont de 1 à 5.<br> Cet indice permet d'accorder un numéro à chacune des cases et d'y accéder.</p>
+
+<p class="para">exemple</p>
+<br>
+<p>var</p>
+<p>		t: array[1..5] of integer;<br>
+begin<br>
+	t[1] := 12;<br>
+	t[2] := 16;<br>
+	t[3] := 7;<br>
+	t[4] := 13;<br>
+	t[5] := 9;<br>
+end.</p><br>
+<br>
+<p class="para">Voilà comment il est possible d'affecter une valeur à chacune des cases du tableau. L'accès en lecture se fait par la même notation.</p>
+
+
+<aside>
+
+
+</aside>
+<br>
+<br>
+<article>
+<h2 class="T1">Les chaînes de caractères</h2>
+<p>Il n’est pas rare de rencontrer une situation où il est nécessaire de stocker des mots et donc des chaînes de caractères appelé également string.<br></p>
+<h2> Chaines statiques </h2>
+<p>Une chaîne statique est une chaîne de caractère dont l'espace mémoire utilisé est prédéfini.<br> La longueur est donc limitée. <br>En pascal, les chaînes statiques sont des tableaux de caractères. Les deux déclarations suivantes sont équivalentes :<br></p>
+<p>var<br>
+		t: array[0..8] of char;<br>
+		s: string[8];<br>
+</p>
+<p class="para">Ainsi, s est un tableaux de caractères indicés de 1 à 8, l'indice 0 étant réservé au stockage de la longueur réel de la chaîne de caractères.<br> On ne peut pas modifier l'indice zéro pour des chaînes dynamiques, c'est-à-dire donc la taille n’est pas définie à l'avance avec la syntaxe string[n].<br>
+il est fortement déconseillé de manipuler l'indice zéro.</p><br>
+
+<p class="para"> continuons l'exemple précedent:<br>
+var<br>
+	s : string[8];<br>
+	i : integer;<br>
+begin<br>
+	s := 'coucou';<br>
+	for i := 2 to 6 do <br>
+		writeln(s[i]);<br>
+end.<br></p>
+<p> ce qui nous donne </p>
+<p>c<br>
+   o<br>
+   u<br>
+   c<br>
+   o<br>
+   u<br>
+
+<h3 class="T1"> tableaux a 2 dimensions </h3>
+<p>Si on désire stocker une matrice entière, il est possible de manipuler des tableaux de tableaux, également appelé tableaux 2D.<br>
+On peut les déclarer de deux façon strictement identique :<br></p>
+
+<p> var <br>
+		m1: array[1..5] of array [1..10] of real;<br>
+		m2: array[1..5,1..10] of real;<br>
+<p> ainsi m1 et m2 sont des matrices de tailles 5 sur 10 et il est possible de les manipuler comme indiquer ci-dessous:<br>
+var<br>
+	m1,m2 : array[1..5,1..10] of real;<br>
+begin<br>
+	m1[i,j] :=10;{affectation de la valeur 10 en ligne i,colonne j}<br>
+	m1[i] := m1[i+1]{copie complete de la ligne i+1 sur ligne i}<br>
+	m2 := m1 {copie de la matrice complete}<br>
+end.<br>
+mais il est implossible d'accéder directement à une colonne.</p>
+
+<h3 class="T1">Fonctions Utiles</h3>
+<center><table>
+	<tr><td>lengt</td><td>Renvoie la longueur du tableau ou de la chaine de caractère</td></tr>
+	<tr><td>low</td><td>Renvoie l'indice minimum du tableau </td></tr>
+	<tr><td>high</td><td>Renvoie l'indice maximum du tableau </td></tr>
+</table></center>
+<br>
+<br>
+<p>l'exemple où l'on affiche chaque caractère contenu dans une chaine de caractère peut être réécrit ainsi:</p>
+<br>
+<p>var<br>
+	s:string[8];<br>
+	i : integer;<br>
+begin<br>
+	s:= 'coucou';<br>
+	for i :=1 to length(s) do<br>
+		writeln(s[i]);<br>
+end.<br></p>
+<br>
+<p> Et on peut initialiser un tableau comme cela:</p>
+<br>
+<p>var<br>
+	t :array[1..5] of integer;<br>
+	i : integer;<br>
+begin<br>
+	{on met la valeur 36 dans toutes les cases du tableau }<br>
+	for i:= low(t) to high(t) do<br>
+	t[i] :=36;<br>
+end.</p><br>
+
+ <p><a href="http://www.commentcamarche.net/download/telecharger-34096271-free-pascal">lien téléchargement FREE PASCAL </a></p>
+ <p><a href="menu.html">Retour au menu</a></p>
+ </section>
+<br>
+<br>
+<footer>
+<p>source:wikiversité Copyright WEILER William - Tous droits reserves </p>
+
+</footer>
+</body>
+
+</HTML>

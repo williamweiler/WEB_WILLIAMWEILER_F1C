@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<HTML>
+	
+	<HEAD>
+
+	<TITLE> Les différents types de variables
+	</TITLE>
+
+	<meta charset="utf-8"/>
+	</HEAD>
+
+<body>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<div id="contenu">
+<br>
+<header>
+<h3 class="T1"> les différents types de variables </h3>
+</header>
+<section>
+<aside>
+<p> Bonjour et bienvenue sur mon site de révision</p>
+</aside>
+<br>
+<br>
+<article>
+<h2 >Présentation des différentes variables </h2><br>
+<h3 > Les différents types de variables sont divisibles en 5 grandes parties. <br>
+<ul>
+<li> Les Entiers : sont des nombres qui ne peuvent pas être décimaux (peuvent être positifs ou négatifs)<br> se traduit en pascal: INTEGER <br>
+<li> Les Réels : sont des nombres pouvants utiliser les décimaux (pouvants être négatif ou positif) <br>se traduit en pascal: REAL <br>
+<li> Les caractères : représentent des caractères uniques (comme une touche du clavier)<br> se traduit en pascal: CHAR <br>
+<li> Les chaînes de caractères : sont utilisées pour entrer une chaîne de plusieurs caractères (un texte)<br> se traduit en pascal: STRING <br>
+<li> Les Booléens : sont utilisés pour donner un réponse  VRAI ou FAUX ce dit d'une variable suceptible de prendre deux valeurs s'excluant mutuellement, par exemple 0 et 1 (état binaire)<br> se traduit en pascal: BOOLEAN<br>
+</ul>
+<p>des variables peuvent etre mis dans la meme ligne </p>
+<center><p>exemple:</p>
+
+<p>nom_var1,var2,var3:(type)</p>
+<p>(toujours mettre les 2 points</p>
+
+<p>nom de la variable 	valeur affectée a la donnée</p>
+
+<p>nom_de_la_variable ← valeur</p>
+		<p>affectation symbole d'affectation</p>
+
+<p>nom de la variable</p> 
+
+<p>ex:note_sur_20 ← 15</p>
+		<p>affectation</p>
+
+
+  <p>nom_de_la_variable ← nom_variable2</p>
+			<p>affectation</p>
+
+  <p>note_sur_100 ← note_sur_20x5</p>
+<h1 class="T1"> Tableau des opérations possibles </h1>
+</center><br>
+<center><table>
+<tr><td><h1 >REELS</h1></td></tr>
+<tr><td>operation possible</td></tr>
+<tr><td>addition</td><td>+</td></tr>
+<tr><td>soustraction</td><td>-</td></tr>
+<tr><td>multiplication</td><td>*</td></tr>
+<tr><td>Division</td><td>/</td></tr>
+<tr><td>Exposant</td><td>^</td></tr>
+<tr><td>Comparaisons</td><td>< <= > >= =< > </td></tr>
+</center></table>
+<center><table >
+<tr><td><h1 >CARACTERES (CAR)</h1></td></tr>
+<tr><td>caractere unique </td><td>ex: "f" "e" </td></tr>
+<tr><td>Opération possible </td></tr>
+<tr><td> Comparaisons</td><td> < <= > >= =< > </td></tr>
+<tr><td> Extraction </td><td> CAR1->EXTRACTION(chaine,position)</td></tr>
+</center></table>
+<center><table>
+<tr><td><h1 >LES CHAINES</h1></td></tr>
+<tr><td>Suite de caractères</td><td> ex: "Bonjour" "64" </td></tr>
+<tr><td>operation possible</td></tr>
+<tr><td>Comparaisons </td><td>< <= > >= =< > </td></tr>
+<tr><td>Extraction </td><td> CH1<-EXTRACTIN (CH2,longueur,position) </td></tr>
+<tr><td>Longueur </td><td>ENT<-longueur </td></tr>
+<tr><td>Concaténation</td><td>CH<- concaténation(CH1,CH2) ou CH<-CH1 & CH2 </td></tr>
+</center></table>
+<center><table>
+<tr><td><h1> LES BOOLEENS </h1></td></tr>
+<tr><td>VRAI ou FAUX</td></tr>
+<tr><td>Opération possible</td></tr>
+<tr><td>Comparaisons</td><td>= < ></td></tr>
+<tr><td>Negation</td><td>NON</td></tr>
+<tr><td>Conjonction</td><td>ET</td></tr>
+<tr><td>Disjonction</td><td>OU</td></tr>
+</center></table>
+<br>
+<center><table>
+<tr><td>Opération logique</td></tr>
+<tr><td>ET/OU/X OU</td></tr>
+<tr><td>AND/OR/X OR</td></tr>
+</center></table>
+<br>
+<br>
+<center><table>
+<tr><td>Table de vérité de ET</td></tr>
+<tr><td>a</td><td>b</td><td></td><td>a ET b</td></tr>
+<br>
+<tr><td>0</td><td>0</td><td></td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td></td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td></td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td></td><td>1</td></tr>
+</center></table>
+<br>
+<br>
+<center><table>
+<tr><td>Table de vérité de OU</td></tr>
+<tr><td>a</td><td>b</td><td></td><td>a ou b</td></tr>
+<tr><td>0</td><td>0</td><td></td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td></td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td></td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td></td><td>1</td></tr>
+ </center></table> 
+ <br>
+ <br>
+ <center><table>
+<tr><td>Table de vérité de a.(b+c)</td></tr>
+<tr><td>a</td><td>b</td><td></td><td>c</td><td>a.(b+c)</td></tr>
+<tr><td>0</td><td>0</td><td></td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>0</td><td></td><td>1</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td></td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td></td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td></td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td></td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td></td><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td></td><td>1</td><td>1</td></tr>
+ </center></table>
+ <br>
+ <br>
+<center><table>
+ 	<tr><td>Table de vérité de X OR (ou exclusif)</td></tr>
+<tr><td>a</td><td>b</td><td></td><td>a x or b</td></tr>
+<tr><td>0</td><td>0</td><td></td><<td>0</td></tr>
+<tr><td>0</td><td>1</td><td></td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td></td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td></td><td>0</td></tr>
+</center> </table>
+<br>
+<br>
+<a href="3eme_fonctions_et_procedures.html">page suivante</a></p>
+ <a href="http://www.commentcamarche.net/download/telecharger-34096271-free-pascal">lien téléchargement FREE PASCAL </a>
+
+</section>
+<footer>
+<p> Copyright WEILER.corp - Tous droits reserves 
+<br>
+
+</footer>
+</body>
+
+</HTML>
